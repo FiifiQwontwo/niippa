@@ -18,7 +18,7 @@ class OrganisationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Organisation
         fields = (
-            'id', 'name_of_organisation', 'email_of_organisation', 'phone_number', 'event_date', 'event_attendance',)
+            'id', 'name_of_organisation', 'email_of_organisation', 'phone_number', 'event_date', )
 
 
 class IndividualSerializer(serializers.ModelSerializer):

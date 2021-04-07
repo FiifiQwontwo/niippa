@@ -17,9 +17,15 @@ urlpatterns = [
     # path('member/<id>', IndividualDetail.as_view(), name='participants_details_urls'),
 
     # individual
-    path('individuals/<pk>', IndividualViewSet.as_view({'get': 'retrieve', }), name='individuals'),
+    path('individuals/<pk>', IndividualViewSet.as_view({'get': 'retrieve', }), name='individuals_detail'),
     path('individuals/', IndividualViewSet.as_view({'get': 'list', }), name='individuals'),
-    path('new_individuals/', IndividualViewSet.as_view({'post': 'create', }), name='individuals'),
+    path('new_individuals/', IndividualViewSet.as_view({'post': 'create', }), name='new individuals'),
     path('individuals/<pk>/update', IndividualViewSet.as_view({'put': 'update', }), name='update_individual'),
+
+    # Organisation
+    path('organisation/<pk>', OrganisationViewSet.as_view({'get': 'retrieve', }), name='organisation_detail'),
+    path('organisation/', OrganisationViewSet.as_view({'get': 'list', }), name='organisation'),
+    path('new_organisation/', OrganisationViewSet.as_view({'post': 'create', }), name='new_organisations'),
+    path('organisation/<pk>/update', OrganisationViewSet.as_view({'put': 'update', }), name='update_organisations'),
 
 ]
